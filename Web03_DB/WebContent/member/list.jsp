@@ -7,7 +7,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원 목록 보기 페이지</title>
+<title>Member List</title>
+<link rel="stylesheet" href="/Web03_DB/css/bootstrap.css" />
 </head>
 <body>
 <% 
@@ -17,8 +18,8 @@
 	//회원목록 얻어오기
 	List<MemberDto> list = dao.getList();
 %>
-	<div class="container">
-		<table>
+	<div class="container-fluid">
+		<table class="table table-striped table-dark">
 			<thead>
 				<tr>
 					<th>번호</th>
