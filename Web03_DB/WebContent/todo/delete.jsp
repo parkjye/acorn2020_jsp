@@ -23,7 +23,7 @@
 <body>
 	<script>
 		alert("Task를 삭제했습니다.");
-		//javaScript를 이용해서 클라이언트에게 특정 경로로 재요청 강요하기
+		//[redirect move] javaScript를 이용해서 클라이언트에게 특정 경로로 재요청 강요하기
 		location.href="${pageContext.request.contextPath}/todo/list.jsp";
 	</script>
 </body>
