@@ -192,8 +192,8 @@ public class MemberDao {
 			conn = new DbcpBean().getConn();
 			//실행할 sql 문 준비하기
 			String sql = "update member"
-					+ " set name=?, addr=?"
-					+ " where num=?";
+					+" set name=?, addr=?"
+					+" where num=?";
 			
 			pstmt = conn.prepareStatement(sql);
 			
