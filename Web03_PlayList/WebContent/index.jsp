@@ -4,31 +4,40 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Play List</title>
-<!-- linked common.css / bootstrap.css -->
+<title>Hello</title>
+<link rel="stylesheet" href="/Web03_PlayList/css/bootstrap.css" />
 <style>
-	.container {}
-	.header {
-		/*position:fixed*/
+	.container{
+		margin:0 auto;
 	}
-	.content{}
+	
+	.header{		
+		margin-bottom: 10px;
+		padding:5px 0;
+		
+	    width: 100%;
+	    height: 5%;
+	    
+	    border-top: solid 1px grey;
+	    border-bottom: solid 3px grey;
+	    
+	    text-align: center;
+	    font-size: 1.5em;
+	}
 </style>
 </head>
 <body>
 	<div class="container">
-	
 		<div class="header">Hello, Choose Your List!</div>
-		
-		<div class="content">
-			<ul>
-				<li><a href="#">List 1</a></li>
-				<li><a href="#">List 2</a></li>
-				<li><a href="#">List 3</a></li>
-				<li><a href="#">List 4</a></li>
-				<li><a href="#">List 5</a></li>
+		<div class="navWrap">
+			<ul class="nav justify-content-center">
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/insertform.jsp">음악 추가</a></li>
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/pList.jsp">List 1(table Palylist)</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">List 2</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">List 3</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">List 4</a></li>
 			</ul>
-		</div>
-		
+		</div><!-- navWrap -->
 	</div><!-- container -->
 </body>
 </html>
