@@ -75,7 +75,7 @@ public class PlaylistDao {
 		try {
 			conn = new DbcpBean().getConn();
 			
-			String sql="select num, checked, title, singer, time"
+			String sql="select num, checked, title, singer, TO_CHAR(time, 'MI:SS') as time"
 					+ " from playlist"
 					+ " where num=?";
 			pstmt = conn.prepareStatement(sql);
@@ -189,6 +189,10 @@ public class PlaylistDao {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		int flag = 0;
+		
+		//System.out.println(dto);
+		//System.out.println(dto.getNum()+" | "+dto.getChecked()+" | "
+		//+dto.getTitle()+" | "+dto.getSinger()+" | "+dto.getTime());
 
 		try {
 			//Connection 객체의 참조값 얻어오기 
@@ -205,7 +209,10 @@ public class PlaylistDao {
 
 			//sql문 수행하고 update or insert or delete된 row의 갯수 리턴받기
 			flag = pstmt.executeUpdate();
-
+			
+			System.out.println(dto.getNum()+" | "+dto.getChecked()+" | "
+					+dto.getTitle()+" | "+dto.getSinger()+" | "+dto.getTime());
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
