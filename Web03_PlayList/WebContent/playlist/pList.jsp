@@ -47,16 +47,16 @@
 %>
 	<div class="container">
 	
-		<div class="header"><h1>Play List 1 (playlist)</h1></div>
+		<div class="header"><h1>table: playlist</h1></div>
 		<div class="navWrap">
 			<ul class="nav justify-content-center">
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }">HOME</a></li>
 				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/insertform.jsp">음악 추가</a></li>
-				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/pList.jsp">List 1(table Palylist)</a></li>
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/pList.jsp">table: palylist</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">List 2</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">List 3</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">List 4</a></li>
 			</ul>
-		</div><!-- navWrap -->		
+		</div><!-- navWrap -->	
 		<div class="contentWrap">
 			<div class="albumArt">albumArt_img</div>
 			<div class="content">

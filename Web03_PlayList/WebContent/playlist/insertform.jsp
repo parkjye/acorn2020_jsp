@@ -6,8 +6,9 @@
 <meta charset="UTF-8">
 <title>음악 추가</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css" />
-<style>
-	.header{
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css" />
+<!--  <style>
+.header{
 		margin-bottom: 10px;
 		padding:5px 0;
 			
@@ -20,29 +21,29 @@
 		text-align: center;
 		font-size: 1.2em;
 		}
-	.contents{
+.contents{
 		/*display:inline-block;*/
 		margin: 0 auto;
 		
 		width:50%;
 		height:100%;
-	}
+}
 	
-	.btnContainer{
+.btnContainer{
 		float: right;
-	}
-</style>
+}
+</style>-->
 </head>
-<body>
+<body id="overrides">
 	<div class="container">
-		<div class="header"><h1>음악 추가</h1></div>
+		<div class="header"><h1>header입니다</h1></div>
 		<div class="navWrap">
 			<ul class="nav justify-content-center">
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }">HOME</a></li>
 				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/insertform.jsp">음악 추가</a></li>
-				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/pList.jsp">List 1(table Palylist)</a></li>
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/pList.jsp">table: palylist</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">List 2</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">List 3</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">List 4</a></li>
 			</ul>
 		</div><!-- navWrap -->
 		<div class="contents">
