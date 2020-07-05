@@ -27,6 +27,15 @@
 	    font-size: 1.5em;
 	}
 	
+	.navWrapSecond{
+
+		width: 100%;
+		margin: 10px auto;
+		
+		border-top: solid 1px #ff99ff;
+		border-bottom: solid 3px #b300b3;
+	}
+	
 	/* <a>삭제, 수정</a> */
 	.tLink{
 		color:#ffcccc;
@@ -46,9 +55,15 @@
 	List<PlaylistDto> list = dao.getList();
 %>
 	<div class="container">
-	
-		<div class="header"><h1>table: playlist</h1></div>
+		<!-- <div class="header"><a href="${pageContext.request.contextPath }">Hello, Choose Your List!</a></div>
+		 
 		<div class="navWrap">
+			<ul class="nav justify-content-center">
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/addANewList.jsp">Add a new LIST</a></li>
+			</ul>
+		</div>-->
+		
+		<div class="navWrapSecond">
 			<ul class="nav justify-content-center">
 				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }">HOME</a></li>
 				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/insertform.jsp">음악 추가</a></li>
@@ -56,9 +71,9 @@
 				<li class="nav-item"><a class="nav-link" href="#">List 2</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">List 3</a></li>
 			</ul>
-		</div><!-- navWrap -->	
+		</div><!-- navWrap -->
 		<div class="contentWrap">
-			<div class="albumArt">albumArt_img</div>
+			<!--  <div class="albumArt">albumArt_img</div>-->
 			<div class="content">
 				<table class="table table-striped table-dark">
 					<thead>
@@ -91,7 +106,7 @@
 			</div>
 		</div>
 		
-		<div class="footer">footer_search</div>
+		<!--  <div class="footer">footer_search</div>-->
 	</div><!-- container -->
 </body>
 </html>

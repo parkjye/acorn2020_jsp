@@ -6,38 +6,42 @@
 <meta charset="UTF-8">
 <title>음악 추가</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css" />
-<!--  <style>
-.header{
-		margin-bottom: 10px;
-		padding:5px 0;
-			
-		width: 100%;
-		height: 5%;
-		    
-		border-top: solid 1px grey;
-		border-bottom: solid 3px grey;
-		    
-		text-align: center;
-		font-size: 1.2em;
-		}
-.contents{
-		/*display:inline-block;*/
-		margin: 0 auto;
+<!-- <link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css" />-->
+<style>
+	.container {
 		
-		width:50%;
-		height:100%;
-}
+		/*color:#47476b;*/
+	}
+	.navWrapSecond{
+
+		width: 100%;
+		margin: 10px auto;
+		
+		border-top: solid 1px #ff99ff;
+		border-bottom: solid 3px #b300b3;
+	}
 	
-.btnContainer{
+	.contents{
+		width:50%;
+		margin:0 auto;
+	}
+	
+	.btnContainer{
 		float: right;
-}
-</style>-->
+	}
+</style>
 </head>
 <body id="overrides">
 	<div class="container">
-		<div class="header"><h1>header입니다</h1></div>
+		<!-- <div class="header"><a href="${pageContext.request.contextPath }">Hello, Choose Your List!</a></div>
+		 
 		<div class="navWrap">
+			<ul class="nav justify-content-center">
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/addANewList.jsp">Add a new LIST</a></li>
+			</ul>
+		</div>-->
+		
+		<div class="navWrapSecond">
 			<ul class="nav justify-content-center">
 				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }">HOME</a></li>
 				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/insertform.jsp">음악 추가</a></li>

@@ -6,28 +6,30 @@
 <meta charset="UTF-8">
 <title>Hello</title>
 <link rel="stylesheet" href="/Web03_PlayList/css/bootstrap.css" />
-<link rel="stylesheet" href="/Web03_PlayList/css/common.css" />
 <style>
+	.container {
+		text-align:center;
+		/*color:#47476b;*/
+	}
 	.navWrapSecond{
-		background-color: cyan; /**/
+
+		width: 100%;
+		margin: 10px auto;
 		
-		width: 50%;
-		height: ;
-		
-		margin: 0 auto;
-		
-		vertical-align: middle;
+		border-top: solid 1px #ff99ff;
+		border-bottom: solid 3px #b300b3;
 	}
 </style>
 </head>
 <body id="overrides">
 	<div class="container">
-		<div class="header"><a href="${pageContext.request.contextPath }">Hello, Choose Your List!</a></div>
+		<!-- <div class="header"><a href="${pageContext.request.contextPath }">Hello, Choose Your List!</a></div>
+		 
 		<div class="navWrap">
 			<ul class="nav justify-content-center">
-				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/insertform.jsp">Add a new LIST</a></li>
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/addANewList.jsp">Add a new LIST</a></li>
 			</ul>
-		</div>
+		</div>-->
 		
 		<div class="navWrapSecond">
 			<ul class="nav justify-content-center">
