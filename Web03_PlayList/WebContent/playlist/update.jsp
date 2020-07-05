@@ -13,9 +13,7 @@
     	
     	//DB에 수정반영
     	PlaylistDto dto = new PlaylistDto(num, checked, title, singer, time);
-    	
-    	boolean isSuccess = PlaylistDao.getInstance().update(dto);
-    
+    	boolean isSuccess = PlaylistDao.getInstance().update(dto);    	
     %>
 <!DOCTYPE html>
 <html>
