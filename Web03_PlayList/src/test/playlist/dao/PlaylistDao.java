@@ -230,4 +230,43 @@ public class PlaylistDao {
 		}
 	}
  
+	//[return] 음악 리스트 추가
+	/*public boolean addALsit(PlaylistDto dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int flag = 0;
+
+		try {
+			conn = new DbcpBean().getConn();
+			//실행할 sql 문 준비하기
+			String sql = "insert into playlist"
+					+ "(num, checked, title, singer, time)"
+					+ "values(playlist_seq.nextval, 'false', ?, ?, sysdate)";
+			pstmt = conn.prepareStatement(sql);
+			
+			//sql 문에 ? 에 바인딩할 값이 있으면 바인딩하고
+			pstmt.setString(1, dto.getTitle());
+			pstmt.setString(2, dto.getSinger());
+
+			//sql문 수행하고 update or insert or delete된 row의 갯수 리턴받기
+			flag = pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)pstmt.close();
+				if (conn != null)conn.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		if (flag > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}*/
+	
+	
 }//PlaylistDao
