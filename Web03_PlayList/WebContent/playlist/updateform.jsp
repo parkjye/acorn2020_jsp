@@ -3,6 +3,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%
+    	request.setCharacterEncoding("utf-8");
+    
     	int num = Integer.parseInt(request.getParameter("num"));
         PlaylistDao dao = PlaylistDao.getInstance();
         PlaylistDto dto = dao.getSingleList(num);
@@ -50,11 +52,11 @@
 		<div class="header"><h1>노래 수정</h1></div>
 		<div class="navWrap">
 			<ul class="nav justify-content-center">
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }">HOME</a></li>
 				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/insertform.jsp">음악 추가</a></li>
-				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/pList.jsp">List 1(table Palylist)</a></li>
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/playlist/pList.jsp">table: palylist</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">List 2</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">List 3</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">List 4</a></li>
 			</ul>
 		</div><!-- navWrap -->
 		
@@ -70,17 +72,17 @@
 				<div class="form-group">
 					<input type="hidden" name="checked" value="<%=dto.getChecked()%>"/>
 					<label for="checked">선택</label>
-					<input type="text" id="checked" id="checked" value="<%=dto.getChecked()%>" disabled/> 
+					<input type="text" id="checked" value="<%=dto.getChecked()%>" disabled/> 
 				</div>
 			
 				<div class="form-group"> 			
 					<label for="title">제목</label>
-					<input type="text" id="title" value="<%=dto.getTitle()%>"/>
+					<input type="text" name="title" id="title" value="<%=dto.getTitle()%>"/>
 				</div>
 			
 				<div class="form-group">
 					<label for="singer">가수</label>
-					<input type="text" id="singer" value="<%=dto.getSinger()%>"/>
+					<input type="text" name="singer" id="singer" value="<%=dto.getSinger()%>"/>
 				</div>
 			
 				<div class="form-group">
