@@ -3,6 +3,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%
+    	request.setCharacterEncoding("utf-8");
+    
     	// 1.GET방식 파라미터로 전달되는 수정할 회원의 번호를 읽어온다.
     	int num = Integer.parseInt(request.getParameter("num"));
     	
@@ -62,7 +64,7 @@
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/member/list.jsp">Member List</a></li>
 				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/member/updateform.jsp">Add a new member</a></li>
-				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/todo/list.jsp">Todo List</a></li>
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/todo/list.jsp">To do List</a></li>
 			</ul>
 		</div>
 		
