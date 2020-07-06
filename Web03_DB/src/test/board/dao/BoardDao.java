@@ -153,7 +153,7 @@ public class BoardDao {
 			//Connection 객체의 참조값 얻어오기 
 			conn = new DbcpBean().getConn();
 			//실행할 sql 문 준비하기
-			String sql = "select writer, title, content, regdate"
+			String sql = "select writer, title, content"
 					+ " from board_guest"
 					+ " where num=?";
 			pstmt = conn.prepareStatement(sql);
@@ -169,7 +169,6 @@ public class BoardDao {
 				dto.setWriter(rs.getString("writer"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
-				dto.setRegdate(rs.getString("regdate"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -200,7 +199,7 @@ public class BoardDao {
 			//Connection 객체의 참조값 얻어오기 
 			conn = new DbcpBean().getConn();
 			//실행할 sql 문 준비하기
-			String sql = "select num, writer, title, content, regdate"
+			String sql = "select num, writer, title, content, to_char(regdate, 'yy/mm/dd HH24:MI') as regdate"
 					+ " from board_guest"
 					+ " order by num asc";
 			pstmt = conn.prepareStatement(sql);
