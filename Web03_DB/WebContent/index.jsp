@@ -22,7 +22,8 @@
 		<ul class="navbar-nav">
 			<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/member/list.jsp">Member List</a></li>
 			<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/member/list.jsp">Add a new member</a></li>
-			<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/todo/list.jsp">Todo List</a></li>
+			<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/todo/list.jsp">To do List</a></li>
+			<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/board/list.jsp">Board List</a></li>
 		</ul>
 	</div>
 	
