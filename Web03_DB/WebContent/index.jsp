@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>index</title>
 <link rel="stylesheet" href="/Web03_DB/css/bootstrap.css" />
 <style>
 	.nav{
@@ -15,7 +15,7 @@
 <body>
 <div class="container-fluid">
 	<div class="header"></div>
-	
+
 	<div class="navbar navbar-expand-sm navbar-dark bg-primary">
 		<a class="navbar-brand" href="${pageContext.request.contextPath }/">HOME</a>
 
