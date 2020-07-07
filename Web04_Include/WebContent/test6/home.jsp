@@ -7,6 +7,9 @@
 <title>test6/home.jsp</title>
 <%-- include된 페이지에 필요한 css도 여기서 로딩을 해야한다. --%>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css" />
+<style>
+	#coustomDiv > a {margin:0 10px}
+</style>
 </head>
 <body>
 	<%-- 
@@ -22,5 +25,9 @@
 	<h1>home페이지 입니다.</h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum obcaecati accusantium fugiat ipsam facilis maiores aut mollitia voluptatem autem totam ab natus voluptatum rerum iste magnam cupiditate esse eaque saepe.</p>
 
+	<!-- include footer -->
+	<jsp:include page="../include/footer.jsp">
+		<jsp:param value="game" name="thisPageFooter"/>
+	</jsp:include>
 </body>
 </html>
