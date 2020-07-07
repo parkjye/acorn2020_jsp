@@ -28,14 +28,16 @@ public class BoardDao {
 		int flag = 0;
 
 		try {
-			//Connection 객체의 참조값 얻어오기 
+			//Connection Pool에서 Connection 객체를 하나 가지고 온다.
 			conn = new DbcpBean().getConn();
-			//실행할 sql 문 준비하기
+			
 			String sql = "insert into board_guest"
 					+" (num, writer, title, content, regdate)"
 					+" values(board_guest_seq.nextval, ?, ?, ?, sysdate)";
+			
 			pstmt = conn.prepareStatement(sql);
-			//sql 문에 ? 에 바인딩할 값이 있으면 바인딩하고 
+			
+			//sql문에 ? 에 바인딩 
 			pstmt.setString(1, dto.getWriter());
 			pstmt.setString(2, dto.getTitle());
 			pstmt.setString(3, dto.getContent());
@@ -48,7 +50,7 @@ public class BoardDao {
 		} finally {
 			try {
 				if (pstmt != null)pstmt.close();
-				if (conn != null)conn.close();
+				if (conn != null)conn.close(); //Connection 반납하기
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
