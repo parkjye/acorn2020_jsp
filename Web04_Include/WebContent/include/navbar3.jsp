@@ -5,7 +5,7 @@
 <%
 	String thisPage = request.getParameter("thisPage");
 %>
-<div class="navbar navbar-expand-sm navbar-dark" style="background-color:#5900b3">
+<div class="navbar navbar-expand-sm navbar-dark" style="background-color:#6351ce">
 	<a class="navbar-brand" href="${pageContext.request.contextPath }/">ACORN</a>
 	<ul class="navbar-nav">
 		<li class="nav-item <%if(thisPage.equals("home")){%>active<%}%>">
