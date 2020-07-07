@@ -52,17 +52,18 @@
 	//회원목록 얻어오기
 	List<MemberDto> list = dao.getList();
 %>
+	<div class="navbar navbar-expand-sm navbar-dark bg-primary">
+		<a class="navbar-brand" href="${pageContext.request.contextPath }/">HOME</a>
+
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/member/list.jsp">Member List</a></li>
+			<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/member/updateform.jsp">Add a new member</a></li>
+			<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/todo/list.jsp">Todo List</a></li>
+		</ul>
+	</div>
+	
 	<div class="container-fluid">
 	
-		<div class="navbar navbar-expand-sm navbar-dark bg-primary">
-			<a class="navbar-brand" href="${pageContext.request.contextPath }/">HOME</a>
-	
-			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/member/list.jsp">Member List</a></li>
-				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/member/updateform.jsp">Add a new member</a></li>
-				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/todo/list.jsp">Todo List</a></li>
-			</ul>
-		</div>
 	
 		<div class="header">회원 목록 입니다.</div>
 	
