@@ -6,10 +6,14 @@
 <meta charset="UTF-8">
 <title>index</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css" />
+<style>
+	.container{
+		background-color:#f8f9fa;
+	}
+</style>
 </head>
 <body>
-
-<div class="container-">
+<div class="container">
 	<jsp:include page="/include/navbar3.jsp">
 		<jsp:param value="index" name="thisPage"/>
 	</jsp:include>
